@@ -1,0 +1,123 @@
+  @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&family=Barlow+Semi+Condensed:wght@500&family=Fraunces:opsz,wght@9..144,500&family=Kumbh+Sans&family=Montserrat&family=Noto+Sans:ital@1&family=Open+Sans&family=Oswald&family=Outfit&display=swap');
+:root{
+    --Moderate-viole:hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue:hsl(217, 19%, 35%);
+   --very-dark-blackish-blue :hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue:hsl(210, 46%, 95%);
+    --font:'Barlow Semi Condensed', sans-serif;
+    
+    
+}
+*{
+    margin:0;
+    padding:0;
+    
+}
+body{
+    background-color: var(--Light-grayish-blue);
+    justify-content: center;
+}
+.cont{
+    display: grid;
+    background-color:var(--Light-grayish-blue);
+    justify-content: center;
+    align-items: center;
+
+    padding:7rem 2rem 2rem 2rem;
+    
+    
+
+}
+.grid-container{
+    display:grid;
+    padding: 10px;
+   
+    justify-content: center;
+    gap:1rem;
+}
+.gird-item .photo{
+    display: flex;
+    gap:1rem;
+    margin-bottom: 1rem;
+}
+.photo img{
+position:relative;
+border-radius: 100%;
+border: 2px solid var(--White);
+width:2rem;
+opacity:0.9;
+}
+
+.gird-item{
+    padding: 1.5rem;
+    border-radius:0.6rem;
+    
+}
+.item1{
+    background-color:var(--Moderate-viole) ;
+    background-image: url(bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: right 2rem top;
+    background-size:6rem;
+}
+.item2{
+    background-color:var(--Very-dark-grayish-blue)
+}
+.item3{
+    background-color:var(--White);
+
+}
+.item3 p{
+    color: black;
+}
+
+ .item4{
+    background-color: var(--very-dark-blackish-blue);
+ }
+ .item5{
+    background-color: var(--White);
+ }
+ .item5 p{
+    color: black;
+}
+ .para1{
+    font-family: var(--font);
+    color: var(--White);
+    font-weight: 600;
+   
+ }
+ .para2{
+    font-family: var(--font);
+    color: var(--White);
+    font-weight:500;
+    opacity:0.7;
+    
+
+ }
+ .pa{
+    margin-top: 1rem;
+ }
+ .para{
+        text-align:left ;
+        
+ }
+ 
+ 
+ @media (min-width:50em){
+    .grid-span1{
+        grid-column:span 2;
+     }
+     .grid-container{
+        grid-template-columns: repeat(4,1fr);
+     }
+     .item5{
+
+        grid-column: 4;
+        grid-row-start:1;
+        grid-row-end: span 2;
+    
+     }
+
+ }
